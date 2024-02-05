@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Under Construction</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -42,8 +41,314 @@
   <p>Working on something. Please check back soon!</p>
 </div>
 
-<!-- Bootstrap JS and Popper.js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ario</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Inter Font from Google Fonts CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+
+    <!-- Additional styles -->
+    <style>
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            padding-top: 50px; /* Adjust as needed */
+        }
+    
+        .navbar {
+            padding: 10px 20px; /* Adjust as needed */
+        }
+    
+        .container {
+            padding: 20px; /* Adjust as needed */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Additional padding for responsiveness */
+        @media (min-width: 768px) {
+            .container {
+                padding-right: 40px;
+                padding-left: 40px;
+            }
+        }
+    
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+    
+        .experience-list {
+            margin-bottom: 5px;
+        }
+    
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    
+        a.clicked {
+            font-weight: bold;
+        }
+        
+        /* Override Bootstrap default styles for anchor links inside the specific ul */
+        .col-md-4 ul li a:hover,
+        .col-md-4 ul li a:focus,
+        .col-md-4 ul li a:active {
+            color: inherit;
+            text-decoration: none;
+        }
+
+         /* Hide the image on screens smaller than 576px (Bootstrap's small size) */
+        @media (max-width: 575.98px) {
+            .col-md-6 .img-fluid {
+                display: none;
+            }
+        }
+        
+    </style>
+    
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">AS</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="#projects">Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Content -->
+    <div class="container mt-5 text-center">
+        <div class="d-flex justify-content-center align-items-center flex-column">
+            <dotlottie-player src="https://lottie.host/f54112b1-5371-4a1f-9970-3bad92df36e7/G2ZCxK2166.json"
+                background="transparent" speed="0.5" style="width: 450px; height: 450px;" loop autoplay></dotlottie-player>
+            <h1 class="fw-bold">Hello, There.</h1>
+            <p class="py-3">I am a software engineer and a Computer Science student from Tangerang, Indonesia. I am
+                fascinated by computer science principles and have expertise in programming, problem-solving, and UI/UX.
+                Additionally, I possess strong soft skills, including leadership, public speaking, communication, and
+                collaboration.</p>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Column with text -->
+            <div class="col-md-6 mb-4">
+                <div class="d-flex flex-column">
+                    <h3 class="fw-bold">About me</h3>
+                    <p class="py-3">I'm a Junior Developer for the Apple Platform, previously at the Apple Developer Academy @BINUS. Simultaneously, I'm a developer and designer, pursuing a Bachelor's in Computer Science at BINUS University.</p>
+                    <p>Here are some technologies I have been working with:</p>
+            
+                    <div class="row">
+                        <div class="col-md-6">
+                            <li>SwiftUI</li>
+                            <li>SpriteKit</li>
+                            <li>AVFoundation</li>
+                        </div>
+                        <div class="col-md-6">
+                            <li>Lottie</li>
+                            <li>Java</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+    
+            <!-- Column with image -->
+            <div class="col-md-6 d-none d-md-block">
+                <!-- Replace "your-image-source.jpg" with the actual path or URL of your image -->
+                <img src="ario.png" alt="Your Alt Text" class="img-fluid rounded rounded-4 mx-auto d-block"
+                    style="width: 364px; height: 363px;">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Experience Content -->
+    <div class="container mt-5" id="experience">
+        <div class="row">
+            <!-- Left column with clickable list -->
+            <div class="col-md-4">
+                <h3 class="fw-bold py-2">Experience</h3>
+                <ul>
+                    <li class="experience-list"><a href="#" onclick="showContent('content1', this)">Apple Developer Academy</a></li>
+                    <li class="experience-list"><a href="#" onclick="showContent('content2', this)">MRT Jakarta</a></li>
+                    <li class="experience-list"><a href="#" onclick="showContent('content3', this)">GMF Aeroasia</a></li>
+                </ul>
+            </div>
+            
+            <!-- Right column with content -->
+            <div class="col-md-8 py-5">
+                <!-- Your content goes here -->
+                <div id="content1">
+                    <h5 class="fw-bold">Junior Developer @ Apple Platform</h5>
+                    <p class="text-muted">Mar 2023 - Dec 2023</p>
+                    <p>The Apple Developer Academy is Asia's first-ever initiative to empower Indonesia's economy by
+                        creating world-class developers for the world's most innovative and vibrant app ecosystem.</p>
+
+                    <ul>
+                        <li>• Developed 6 iOS apps and 1 game in 10 months.</li>
+                        <li>• Analyzed user needs, implemented solutions, and collaborated on real-world challenges with
+                            cross-functional teams using Challenge-Based Learning.</li>
+                    </ul>
+                </div>
+                <div id="content2" style="display: none;">
+                    <h5 class="fw-bold">iOS Engineer</h5>
+                        <p class="text-muted">Jul 2023 - Jul 2023</p>
+                        <p>During my tenure as an Junior Developer at the Apple Developer Academy, I contributed to PT. MRT
+                            Jakarta's mission to enhance urban mobility and connectivity in the capital city through its
+                            modern public transit system.</p>
+
+                        <ul>
+                            <li>• Developed a feature for the MRT-J app, aiming to optimize route planning and
+                                streamline user navigation.</li>
+                            <li>• Utilized push notifications and location services to simplify the process of searching
+                                for exit gates within MRT stations, resulting in an improved and user-friendly
+                                experience.</li>
+                        </ul>
+                </div>
+                <div id="content3" style="display: none;">
+                    <h5 class="fw-bold">Engineering Intern</h5>
+                        <p class="text-muted">Feb 2019 - Feb 2019</p>
+                        <p>GMF AeroAsia is an Indonesian company offering aircraft maintenance and repair services,
+                            affiliated with Garuda Indonesia.</p>
+
+                        <ul>
+                            <li>• Collaborated with the team, gaining foundational knowledge in aviation systems.</li>
+                            <li>• Actively engaged with engineers to grasp the intricacies of their roles, contributing
+                                to a comprehensive understanding of the aviation industry.</li>
+                        </ul>
+                </div>
+                <!-- Additional experience content goes here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Content -->
+    <div class="container mt-5" id="projects">
+        <!-- Your content goes here -->
+        <div class="container mt-5" id="projects">
+            <!-- Your content goes here -->
+            <h3 class="fw-bold text-center mb-4 py-2">Projects</h3>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card rounded rounded-4">
+                        <div class="card-body">
+                            <h5 class="card-title">KoKa (KosaKata)</h5>
+                            <p class="card-text">Koka is an innovative app designed to empower parents to effectively educate their deaf children, and expand their vocabulary, particularly in abstract concepts.</p>
+                            <h6 class="card-subtitle mb-2 text-muted">SwiftUI, AVFoundation</h6>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-4 mb-4">
+                    <div class="card rounded rounded-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tingle</h5>
+                            <p class="card-text">Tingle is an WatchOS app that provides sensation of fidgeting and haptic through your Apple Watch, targeted for user with ADHD, to divert their impulsivity into sensory input they need as their enhance their focus.</p>
+                            <h6 class="card-subtitle mb-2 text-muted">WatchOS</h6>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="col-md-4 mb-4">
+                    <div class="card rounded rounded-4">
+                        <div class="card-body">
+                            <h5 class="card-title">MRTGo</h5>
+                            <p class="card-text">The objective of this project is to develop a feature in the MRT-J application using push notification and location on iOS app. </p>
+                            <h6 class="card-subtitle mb-2 text-muted">Core Location, Push Notification</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="text-dark text-center pt-5">
+                <div class="container">
+                    <p class="small">Built and designed by Ario <br> All rights reserved. &copy;</p>
+                   
+                </div>
+            </footer>
+            
+
+        </div>
+        
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Make the default item (content1) active
+        var defaultItem = document.querySelector('ul li a[href="#content1"]');
+        if (defaultItem) {
+            showContent('content1', defaultItem);
+        }
+    });
+
+    function showContent(contentId, clickedItem) {
+    // Remove the 'active' class from all list items
+    var listItems = document.querySelectorAll('ul li a');
+    listItems.forEach(function (li) {
+        li.classList.remove('active', 'clicked'); // Remove 'clicked' class as well
+    });
+
+    // Add the 'active' class to the clicked list item
+    clickedItem.classList.add('active', 'clicked');
+
+    // Hide all content divs
+    document.querySelectorAll('[id^="content"]').forEach(function (div) {
+        div.style.display = 'none';
+    });
+
+    // Show the selected content
+    document.getElementById(contentId).style.display = 'block';
+
+    // Prevent the default behavior of the anchor tag
+    if (event) {
+        event.preventDefault();
+    }
+}
+
+</script>
+
+</body>
+
 </html>
+
