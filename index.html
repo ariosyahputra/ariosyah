@@ -59,20 +59,26 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
     <!-- Inter Font from Google Fonts CDN -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap">
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
+   <!-- Include FontAwesome library -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <!-- Additional styles -->
     <style>
         
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             padding-top: 50px; /* Adjust as needed */
+            padding-bottom: 50px; /* Add padding to the bottom */
+            margin-left: 20%;
+            margin-right: 20%;
         }
     
         .navbar {
-            padding: 10px 20px; /* Adjust as needed */
+            padding: 10px 10%; /* Adjust as needed */
         }
     
         .container {
@@ -82,10 +88,18 @@
         }
 
         /* Additional padding for responsiveness */
-        @media (min-width: 768px) {
+        /* @media (min-width: 768px) {
             .container {
                 padding-right: 40px;
                 padding-left: 40px;
+            }
+        } */
+
+        @media (max-width: 767px) {
+            /* Mobile styles */
+            body {
+                margin-left: 10%;
+                margin-right: 10%;
             }
         }
     
@@ -115,11 +129,46 @@
             text-decoration: none;
         }
 
-         /* Hide the image on screens smaller than 576px (Bootstrap's small size) */
-        @media (max-width: 575.98px) {
-            .col-md-6 .img-fluid {
-                display: none;
-            }
+        /* Show LinkedIn and GitHub icons on mobile */
+    @media (max-width: 575.98px) {
+        .navbar-nav.ml-auto {
+            display: flex !important;
+            align-items: center;
+        }
+
+        .navbar-nav.ml-auto li {
+            margin-right: 10px; /* Adjust as needed */
+        }
+
+        /* Ensure LinkedIn and GitHub icons are visible on mobile */
+        .navbar-nav.ml-auto li.nav-item {
+            display: flex !important;
+        }
+
+        .navbar-collapse {
+            display: none !important;
+        }
+
+        .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+            display: block !important;
+        }
+    }
+
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .img-fluid:hover {
+        transform: translateY(-10px);
+        transition: transform 0.3s ease;
+
+        }
+
+        p {
+        text-align: justify;
+        text-justify: justify;
         }
         
     </style>
@@ -134,10 +183,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link px-3 py-2" aria-current="page" href="#">Home</a>
+                        <a class="nav-link px-3 py-2" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3 py-2" href="#">About</a>
+                        <a class="nav-link px-3 py-2" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3 py-2" href="#experience">Experience</a>
@@ -146,17 +195,36 @@
                         <a class="nav-link px-3 py-2" href="#projects">Projects</a>
                     </li>
                 </ul>
+                
+               <!-- GitHub and LinkedIn icons on the right top -->
+                <ul class="navbar-nav">
+                    <!-- LinkedIn icon -->
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="https://www.linkedin.com/in/ariosyahputra" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <!-- GitHub icon -->
+                    <li class="nav-item">
+                        <a class="nav-link px-3 py-2" href="https://github.com/ariosyahputra" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
         </div>
     </nav>
 
+    
+
     <!-- Home Content -->
-    <div class="container mt-5 text-center">
+    <div class="container mt-5 text-center" id="home">
         <div class="d-flex justify-content-center align-items-center flex-column">
             <dotlottie-player src="https://lottie.host/f54112b1-5371-4a1f-9970-3bad92df36e7/G2ZCxK2166.json"
-                background="transparent" speed="0.5" style="width: 450px; height: 450px;" loop autoplay></dotlottie-player>
+                background="transparent" speed="1.0" style="width: 450px; height: 450px;" loop autoplay></dotlottie-player>
             <h1 class="fw-bold">Hello, There.</h1>
-            <p class="py-3">I am a software engineer and a Computer Science student from Tangerang, Indonesia. I am
+            <p class="py-3">I am a <b>software engineer</b> and a Computer Science student from Tangerang, Indonesia. I am
                 fascinated by computer science principles and have expertise in programming, problem-solving, and UI/UX.
                 Additionally, I possess strong soft skills, including leadership, public speaking, communication, and
                 collaboration.</p>
@@ -164,39 +232,38 @@
     </div>
 
     <!-- About Content -->
-    <div class="container mt-5">
+    <div class="container mt-5" id="about">
         <div class="row">
             <!-- Column with text -->
             <div class="col-md-6 mb-4">
                 <div class="d-flex flex-column">
-                    <h3 class="fw-bold">About me</h3>
-                    <p class="py-3">I'm a Junior Developer for the Apple Platform, previously at the Apple Developer Academy @BINUS. Simultaneously, I'm a developer and designer, pursuing a Bachelor's in Computer Science at BINUS University.</p>
+                    <h3 class="fw-bold py-2">About me</h3>
+                    <p>I'm a <b>Junior Developer</b> for the <b>Apple Platform</b>, previously at the <a href="https://developeracademy.apps.binus.ac.id"> <b>Apple Developer Academy @BINUS</b></a>.
+                        Simultaneously, I'm a developer and designer, pursuing a Bachelor's in Computer Science at <a href="https://binus.ac.id"> <b>BINUS University</b></a>.</p>
                     <p>Here are some technologies I have been working with:</p>
-            
+    
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <li>SwiftUI</li>
                             <li>SpriteKit</li>
                             <li>AVFoundation</li>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <li>Lottie</li>
                             <li>Java</li>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
     
-            <!-- Column with image -->
-            <div class="col-md-6 d-none d-md-block">
-                <!-- Replace "your-image-source.jpg" with the actual path or URL of your image -->
+            <!-- Column with image (hidden on mobile screens) -->
+            <div class="col-md-6 d-none d-sm-block ml-5">
                 <img src="ario.png" alt="Your Alt Text" class="img-fluid rounded rounded-4 mx-auto d-block"
                     style="width: 364px; height: 363px;">
             </div>
         </div>
     </div>
+    
     
     <!-- Experience Content -->
     <div class="container mt-5" id="experience">
@@ -258,8 +325,6 @@
         </div>
     </div>
 
-    <!-- Project Content -->
-    <div class="container mt-5" id="projects">
         <!-- Your content goes here -->
         <div class="container mt-5" id="projects">
             <!-- Your content goes here -->
@@ -268,7 +333,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card rounded rounded-4">
                         <div class="card-body">
-                            <h5 class="card-title">KoKa (KosaKata)</h5>
+                            <h5 class="card-title fw-bold">KoKa (KosaKata)</h5>
                             <p class="card-text">Koka is an innovative app designed to empower parents to effectively educate their deaf children, and expand their vocabulary, particularly in abstract concepts.</p>
                             <h6 class="card-subtitle mb-2 text-muted">SwiftUI, AVFoundation</h6>
                         </div>
@@ -278,7 +343,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card rounded rounded-4">
                         <div class="card-body">
-                            <h5 class="card-title">Tingle</h5>
+                            <h5 class="card-title fw-bold">Tingle</h5>
                             <p class="card-text">Tingle is an WatchOS app that provides sensation of fidgeting and haptic through your Apple Watch, targeted for user with ADHD, to divert their impulsivity into sensory input they need as their enhance their focus.</p>
                             <h6 class="card-subtitle mb-2 text-muted">WatchOS</h6>
                         </div>
@@ -288,7 +353,7 @@
                 <div class="col-md-4 mb-4">
                     <div class="card rounded rounded-4">
                         <div class="card-body">
-                            <h5 class="card-title">MRTGo</h5>
+                            <h5 class="card-title fw-bold">MRTGo</h5>
                             <p class="card-text">The objective of this project is to develop a feature in the MRT-J application using push notification and location on iOS app. </p>
                             <h6 class="card-subtitle mb-2 text-muted">Core Location, Push Notification</h6>
                         </div>
@@ -296,15 +361,13 @@
                 </div>
             </div>
 
-            <footer class="text-dark text-center pt-5">
-                <div class="container">
-                    <p class="small">Built and designed by Ario <br> All rights reserved. &copy;</p>
-                   
-                </div>
-            </footer>
-            
-
         </div>
+
+        <footer class="text-dark text-center pt-5 mt-5">
+            <div class="container">
+                <p class="small text-center">Built and designed by Ario <br> All rights reserved. &copy;</p>
+            </div>
+        </footer>
         
     </div>
 
@@ -313,7 +376,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"></script>
 
-    <script>
+    <script defer>
     document.addEventListener('DOMContentLoaded', function () {
         // Make the default item (content1) active
         var defaultItem = document.querySelector('ul li a[href="#content1"]');
@@ -344,6 +407,7 @@
     if (event) {
         event.preventDefault();
     }
+    
 }
 
 </script>
@@ -351,4 +415,5 @@
 </body>
 
 </html>
+
 
