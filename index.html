@@ -92,29 +92,29 @@
         }
 
         /* Show LinkedIn and GitHub icons on mobile */
-    @media (max-width: 575.98px) {
-        .navbar-nav.ml-auto {
-            display: flex !important;
-            align-items: center;
-        }
+        @media (max-width: 575.98px) {
+            .navbar-nav.ml-auto {
+                display: flex !important;
+                align-items: center;
+            }
 
-        .navbar-nav.ml-auto li {
-            margin-right: 10px; /* Adjust as needed */
-        }
+            .navbar-nav.ml-auto li {
+                margin-right: 10px; /* Adjust as needed */
+            }
 
-        /* Ensure LinkedIn and GitHub icons are visible on mobile */
-        .navbar-nav.ml-auto li.nav-item {
-            display: flex !important;
-        }
+            /* Ensure LinkedIn and GitHub icons are visible on mobile */
+            .navbar-nav.ml-auto li.nav-item {
+                display: flex !important;
+            }
 
-        .navbar-collapse {
-            display: none !important;
-        }
+            .navbar-collapse {
+                display: none !important;
+            }
 
-        .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
-            display: block !important;
+            .navbar-toggler[aria-expanded="true"] + .navbar-collapse {
+                display: block !important;
+            }
         }
-    }
 
 
         .card:hover {
@@ -132,6 +132,12 @@
         text-align: justify;
         text-justify: justify;
         }
+
+        .card-text, .card-subtitle, .experience-content li, .about-content li {
+            font-size: 14px;
+        }
+
+        
         
         
     </style>
@@ -160,7 +166,7 @@
                 </ul>
                 
                <!-- GitHub and LinkedIn icons on the right top -->
-                <ul class="navbar-nav">
+                <ul class="navbar-nav"> 
                     <!-- LinkedIn icon -->
                     <li class="nav-item">
                         <a class="nav-link px-3 py-2" href="https://www.linkedin.com/in/ariosyahputra" target="_blank">
@@ -197,10 +203,10 @@
     <div class="container mt-5" id="about">
         <div class="row">
             <!-- Column with text -->
-            <div class="col-md-6 mb-4">
+            <div class="about-content col-md-6 mb-4">
                 <div class="d-flex flex-column">
                     <h3 class="fw-bold py-2">About me</h3>
-                    <p>I'm a <b>Junior Developer</b> for the <b>Apple Platform</b>, previously at the <a href="https://developeracademy.apps.binus.ac.id"> <b>Apple Developer Academy @BINUS</b></a>.
+                    <p>I'm a <b>Junior Developer</b> for the <b>Apple Platform</b>, previously at the <a href="https://developeracademy.apps.binus.ac.id"> <b>Apple Developer Academy</b></a>.
                         Simultaneously, I'm a developer and designer, pursuing a Bachelor's in Computer Science at <a href="https://binus.ac.id"> <b>BINUS University</b></a>.</p>
                     <p>Here are some technologies I have been working with:</p>
     
@@ -241,46 +247,48 @@
             </div>
             
             <!-- Right column with content -->
-            <div class="col-md-8 py-5">
+            <div class="experience-content col-md-8 py-5">
                 <!-- Your content goes here -->
-                <div id="content1">
+                <div id="content1" class="py-2">
                     <h5 class="fw-bold">Junior Developer @ Apple Platform</h5>
                     <p class="text-muted">Mar 2023 - Dec 2023</p>
                     <p>The Apple Developer Academy is Asia's first-ever initiative to empower Indonesia's economy by
                         creating world-class developers for the world's most innovative and vibrant app ecosystem.</p>
-
-                    <ul>
-                        <li>• Developed 6 iOS apps and 1 game in 10 months.</li>
-                        <li>• Analyzed user needs, implemented solutions, and collaborated on real-world challenges with
+                    
+                    <div class="row">
+                        <li>Developed 6 iOS apps and 1 game in 10 months.</li>
+                        <li>Analyzed user needs, implemented solutions, and collaborated on real-world challenges with
                             cross-functional teams using Challenge-Based Learning.</li>
-                    </ul>
+                    </div>
+                
                 </div>
-                <div id="content2" style="display: none;">
+                <div id="content2" class="py-2" style="display: none;">
                     <h5 class="fw-bold">iOS Engineer</h5>
                         <p class="text-muted">Jul 2023 - Jul 2023</p>
                         <p>During my tenure as an Junior Developer at the Apple Developer Academy, I contributed to PT. MRT
                             Jakarta's mission to enhance urban mobility and connectivity in the capital city through its
                             modern public transit system.</p>
 
-                        <ul>
-                            <li>• Developed a feature for the MRT-J app, aiming to optimize route planning and
+                        <div class="row">
+                            <li>Developed a feature for the MRT-J app, aiming to optimize route planning and
                                 streamline user navigation.</li>
-                            <li>• Utilized push notifications and location services to simplify the process of searching
+                            <li>Utilized push notifications and location services to simplify the process of searching
                                 for exit gates within MRT stations, resulting in an improved and user-friendly
                                 experience.</li>
-                        </ul>
+                        </div>
+
                 </div>
-                <div id="content3" style="display: none;">
+                <div id="content3" class="py-2" style="display: none;">
                     <h5 class="fw-bold">Engineering Intern</h5>
                         <p class="text-muted">Feb 2019 - Feb 2019</p>
                         <p>GMF AeroAsia is an Indonesian company offering aircraft maintenance and repair services,
                             affiliated with Garuda Indonesia.</p>
 
-                        <ul>
-                            <li>• Collaborated with the team, gaining foundational knowledge in aviation systems.</li>
-                            <li>• Actively engaged with engineers to grasp the intricacies of their roles, contributing
+                        <div class="row">
+                            <li>Collaborated with the team, gaining foundational knowledge in aviation systems.</li>
+                            <li>Actively engaged with engineers to grasp the intricacies of their roles, contributing
                                 to a comprehensive understanding of the aviation industry.</li>
-                        </ul>
+                        </div>
                 </div>
                 <!-- Additional experience content goes here -->
             </div>
@@ -288,13 +296,16 @@
     </div>
 
         <!-- Your content goes here -->
-        <div class="container mt-5" id="projects">
+        <div class="container mt-5 justify-content-center" id="projects">
             <!-- Your content goes here -->
             <h3 class="fw-bold text-center mb-4 py-2">Projects</h3>
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card rounded rounded-4">
-                        <div class="card-body">
+
+                        <img src="https://my.iosda.org/site/glide?path=teams%2F4139%2Ftile%2Ftile+image.jpg&w=600&h=200&fit=crop&s=66460a4808c7b355e376548f0533989c" class="card-img-top" alt="KoKa image" Image" style="border-top-right-radius: 15px; border-top-left-radius: 15px;">
+
+                        <div class="card-body p-4">
                             <h5 class="card-title fw-bold">KoKa (KosaKata)</h5>
                             <p class="card-text">Koka is an innovative app designed to empower parents to effectively educate their deaf children, and expand their vocabulary, particularly in abstract concepts.</p>
                             <h6 class="card-subtitle mb-2 text-muted">SwiftUI, AVFoundation</h6>
@@ -304,17 +315,24 @@
         
                 <div class="col-md-4 mb-4">
                     <div class="card rounded rounded-4">
-                        <div class="card-body">
+                        <img src="https://my.iosda.org/site/glide?path=teams%2F3737%2Ftile%2FMockup+-+FIX.png&w=600&h=200&fit=crop&s=1789cfe4ea603657a4d827916dfdde36" class="card-img-top" alt="Tingle Image" style="border-top-right-radius: 15px; border-top-left-radius: 15px;">
+                        
+                        <div class="card-body p-4">
                             <h5 class="card-title fw-bold">Tingle</h5>
                             <p class="card-text">Tingle is an WatchOS app that provides sensation of fidgeting and haptic through your Apple Watch, targeted for user with ADHD, to divert their impulsivity into sensory input they need as their enhance their focus.</p>
-                            <h6 class="card-subtitle mb-2 text-muted">WatchOS</h6>
+                            <p class="card-subtitle mb-2 text-muted">WatchOS</p>
                         </div>
                     </div>
                 </div>
+                                                                
+                
+                
         
                 <div class="col-md-4 mb-4">
                     <div class="card rounded rounded-4">
-                        <div class="card-body">
+                        <img src="https://my.iosda.org/site/glide?path=teams%2F3732%2Ftile%2FFrame+93.png&w=600&h=200&fit=crop&s=8a15a5bca94f7d57667b6192f0304bc1" class="card-img-top" alt="MRTGo Image" style="border-top-right-radius: 15px; border-top-left-radius: 15px;">
+
+                        <div class="card-body p-4">
                             <h5 class="card-title fw-bold">MRTGo</h5>
                             <p class="card-text">The objective of this project is to develop a feature in the MRT-J application using push notification and location on iOS app. </p>
                             <h6 class="card-subtitle mb-2 text-muted">Core Location, Push Notification</h6>
