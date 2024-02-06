@@ -1,50 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Under Construction</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f8f9fa;
-    }
-
-    .container {
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2em;
-      color: #6c757d;
-    }
-
-    .logo {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
-  <h1>Under Construction</h1>
-  <p>Working on something. Please check back soon!</p>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +18,8 @@
    <!-- Include FontAwesome library -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+   <!-- Typewriter libary -->
+   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 
     <!-- Additional styles -->
     <style>
@@ -75,6 +30,13 @@
             padding-bottom: 50px; /* Add padding to the bottom */
             margin-left: 20%;
             margin-right: 20%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+
+        }
+
+        body.loaded {
+             opacity: 1;
         }
     
         .navbar {
@@ -171,6 +133,7 @@
         text-justify: justify;
         }
         
+        
     </style>
     
 </head>
@@ -183,7 +146,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link px-3 py-2" aria-current="page" href="/">Home</a>
+                        <a class="nav-link px-3 py-2" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3 py-2" href="#about">About</a>
@@ -221,9 +184,8 @@
     <!-- Home Content -->
     <div class="container mt-2 text-center" id="home">
         <div class="d-flex justify-content-center align-items-center flex-column">
-            <dotlottie-player src="https://lottie.host/f54112b1-5371-4a1f-9970-3bad92df36e7/G2ZCxK2166.json"
-                background="transparent" speed="1.0" style="width: 350px; height: 350px;" loop autoplay></dotlottie-player>
-            <h1 class="fw-bold">Hello, There.</h1>
+            <dotlottie-player src="https://lottie.host/a04a7b78-032f-4b24-91fb-db6fa44ead4d/gBUYD6oofb.json" background="transparent" speed="1" style="width: 350px; height: 350px;" loop autoplay></dotlottie-player>            
+            <h3 id="typewriter" class="typewriter-text fw-bold"></h3>
             <p class="py-3">I am a <b>software engineer</b> and a Computer Science student from Tangerang, Indonesia. I am
                 fascinated by computer science principles and have expertise in programming, problem-solving, and UI/UX.
                 Additionally, I possess strong soft skills, including leadership, public speaking, communication, and
@@ -259,7 +221,7 @@
             <!-- Column with image (hidden on mobile screens) -->
             <div class="col-md-6 d-none d-sm-block ml-5">
                 <img src="ario.png" alt="Your Alt Text" class="img-fluid rounded rounded-4 mx-auto d-block"
-                    style="width: 364px; height: 363px;">
+                    style="width: 300px; height: 300px;">
             </div>
         </div>
     </div>
@@ -377,6 +339,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"></script>
 
     <script defer>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+            // Add the 'loaded' class to the body after a short delay
+            setTimeout(function () {
+                document.body.classList.add('loaded');
+            }, 500); // You can adjust the delay (in milliseconds) as needed
+        });
+
+
     document.addEventListener('DOMContentLoaded', function () {
         // Make the default item (content1) active
         var defaultItem = document.querySelector('ul li a[href="#content1"]');
@@ -386,31 +357,39 @@
     });
 
     function showContent(contentId, clickedItem) {
-    // Remove the 'active' class from all list items
-    var listItems = document.querySelectorAll('ul li a');
-    listItems.forEach(function (li) {
-        li.classList.remove('active', 'clicked'); // Remove 'clicked' class as well
-    });
+        // Remove the 'active' class from all list items
+        var listItems = document.querySelectorAll('ul li a');
+        listItems.forEach(function (li) {
+            li.classList.remove('active', 'clicked'); // Remove 'clicked' class as well
+        });
 
-    // Add the 'active' class to the clicked list item
-    clickedItem.classList.add('active', 'clicked');
+        // Add the 'active' class to the clicked list item
+        clickedItem.classList.add('active', 'clicked');
 
-    // Hide all content divs
-    document.querySelectorAll('[id^="content"]').forEach(function (div) {
-        div.style.display = 'none';
-    });
+        // Hide all content divs
+        document.querySelectorAll('[id^="content"]').forEach(function (div) {
+            div.style.display = 'none';
+        });
 
-    // Show the selected content
-    document.getElementById(contentId).style.display = 'block';
+        // Show the selected content
+        document.getElementById(contentId).style.display = 'block';
 
-    // Prevent the default behavior of the anchor tag
-    if (event) {
-        event.preventDefault();
-    }
+        // Prevent the default behavior of the anchor tag
+        if (event) {
+            event.preventDefault();
+        }
     
-}
+    }
 
-</script>
+    // Initialize typewriter effect
+    const target = document.getElementById('typewriter');
+    const typewriter = new Typewriter(target, {
+      strings: 'Hello, Ario here.',
+      autoStart: true,
+      loop: false,
+    });
+
+    </script>
 
 </body>
 
