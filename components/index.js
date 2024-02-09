@@ -56,7 +56,7 @@ const projectData = [
         imageSrc: "https://my.iosda.org/site/glide?path=teams%2F3732%2Ftile%2FFrame+93.png&w=600&h=200&fit=crop&s=8a15a5bca94f7d57667b6192f0304bc1",
         description: "The objective of this project is to develop a feature in the MRT-J application using push notification and location on iOS app.",
         technologies: "Core Location, Push Notification",
-        projectUrl: "#"
+        projectUrl: "/projects/MRTGo"
     },
     {
         title: "Skipwing",
