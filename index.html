@@ -135,6 +135,12 @@
         .card-text, .card-subtitle, .experience-content li, .about-content li, .experience-date {
             font-size: 14px;
         }
+
+        #cardContainer a:hover {
+            color: inherit; /* or any other desired text color */
+        }
+
+
     </style>
     
 </head>
@@ -285,38 +291,43 @@
                 title: "KoKa",
                 imageSrc: "https://my.iosda.org/site/glide?path=teams%2F4139%2Ftile%2Ftile+image.jpg&w=600&h=200&fit=crop&s=66460a4808c7b355e376548f0533989c",
                 description: "Koka (KosaKata) is an innovative app designed to empower parents to effectively educate their deaf children, and expand their vocabulary, particularly in abstract concepts.",
-                technologies: "SwiftUI, AVFoundation, CoreData, Lottie"
+                technologies: "SwiftUI, AVFoundation, CoreData, Lottie",
+                projectUrl: "/projects/KoKa"
             },
             {
                 title: "Tingle",
                 imageSrc: "https://my.iosda.org/site/glide?path=teams%2F3737%2Ftile%2FMockup+-+FIX.png&w=600&h=200&fit=crop&s=1789cfe4ea603657a4d827916dfdde36",
                 description: "Tingle is an WatchOS app that provides sensation of fidgeting and haptic through your Apple Watch, targeted for user with ADHD, to divert their impulsivity into sensory input they need as their enhance their focus.",
-                technologies: "WatchOS"
+                technologies: "WatchOS",
+                projectUrl: "#"
             },
             {
                 title: "Tera",
                 imageSrc: "https://my.iosda.org/site/glide?path=teams%2F3209%2Ftile%2FFinal+Banner+small.jpg&w=600&h=200&fit=crop&s=3724bd54e755833132695503f3b19dac",
                 description: "Tera (Teman Bicara) is speech-to-text app to help to communicate with deaf people.",
-                technologies: "SwiftUI, Speech, Lottie"
+                technologies: ""
             },
             {
                 title: "MRTGo",
                 imageSrc: "https://my.iosda.org/site/glide?path=teams%2F3732%2Ftile%2FFrame+93.png&w=600&h=200&fit=crop&s=8a15a5bca94f7d57667b6192f0304bc1",
                 description: "The objective of this project is to develop a feature in the MRT-J application using push notification and location on iOS app.",
-                technologies: "Core Location, Push Notification"
+                technologies: "Core Location, Push Notification",
+                projectUrl: "#"
             },
             {
                 title: "Skipwing",
                 imageSrc: "https://my.iosda.org/site/glide?path=teams%2F3778%2Ftile%2Fiosda-min.png&w=600&h=200&fit=crop&s=5be679d250d470c96758128d24af8223",
                 description: "Skipwing is a revolutionary take on the timeless game of jumping rope, reinvented for the digital realm.",
-                technologies: "SpriteKit, AVFoundation"
+                technologies: "SpriteKit, AVFoundation",
+                projectUrl: "#"
             }
             ,
             {
                 title: "Timee",
                 imageSrc: "https://my.iosda.org/site/glide?path=teams%2F3446%2Ftile%2Fthumbnail+timee.png&w=600&h=200&fit=crop&s=3da8dc1269eb7dd203b741db94802d02",
                 description: "Timee is the ultimate tool for workers to enhance their focus while doing tasks.",
-                technologies: "SwiftUI, AVFoundation, CoreData, Lottie"
+                technologies: "SwiftUI, AVFoundation, CoreData, Lottie",
+                projectUrl: "/projects/Timee"
             }
         ];
     
@@ -354,26 +365,29 @@
         // Function to generate project cards
         function generateProjectCards() {
             const cardContainer = document.getElementById('cardContainer');
-    
+
             projectData.forEach(data => {
                 const cardDiv = document.createElement('div');
                 cardDiv.classList.add('col-md-4', 'mb-4');
-    
-                const card = `
-                    <div class="card rounded rounded-4">
-                        <img src="${data.imageSrc}" class="card-img-top" alt="${data.title} Image" style="border-top-right-radius: 15px; border-top-left-radius: 15px;">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold">${data.title}</h5>
-                            <p class="card-text">${data.description}</p>
-                            <p class="card-subtitle mb-2 text-muted">${data.technologies}</p>
+
+                const cardContent = `
+                    <a href="${data.projectUrl}" target="_blank" class="card-link" ${data.projectUrl && data.projectUrl !== "#" ? "" : "onclick='return false;'"} >
+                        <div class="card rounded rounded-4">
+                            <img src="${data.imageSrc}" class="card-img-top" alt="${data.title} Image" style="border-top-right-radius: 15px; border-top-left-radius: 15px;">
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold">${data.title}</h5>
+                                <p class="card-text">${data.description}</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 `;
                 
-                cardDiv.innerHTML = card;
+                cardDiv.innerHTML = cardContent;
                 cardContainer.appendChild(cardDiv);
             });
         }
+
+
     
         // Function to generate experience content
         function generateExperienceContent() {
