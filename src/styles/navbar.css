@@ -2,3 +2,10 @@
     padding: 10px 10%; /* Adjust as needed */
 }
 
+
+@media (min-width: 992px) {
+    .navbar {
+        padding-left: calc((100vw - 992px) / 20); /* Adjust as needed */
+        padding-right: calc((100vw - 992px) / 20); /* Adjust as needed */
+    }
+}
