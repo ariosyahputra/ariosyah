@@ -5,5 +5,5 @@
   ariosyah.com - v1
 </h1>
 <p align="center">
-  The first iteration of <a href="https://gazijarin.com" target="_blank">ariosyah.com</a> built with Bootstrap & Javascript.
+  The first iteration of <a href="https://ariosyah.com" target="_blank">ariosyah.com</a> built with Bootstrap & Javascript.
 </p>
