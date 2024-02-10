@@ -2,8 +2,8 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     padding-top: 50px; /* Adjust as needed */
     padding-bottom: 50px; /* Add padding to the bottom */
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -19,11 +19,11 @@ body.loaded {
     max-width: 960px; /* Set a maximum width for the container */
 }
 
-@media (max-width: 767px) {
+@media (min-width: 767px) {
     /* Mobile styles */
     body {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 15%;
+        margin-right: 15%;
     }
 }
 
