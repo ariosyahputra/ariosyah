@@ -123,7 +123,7 @@ function generateExperienceContent() {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Generate project cards
-    generateProjectCards();
+    // generateProjectCards();
 
     // Generate experience content
     generateExperienceContent();
